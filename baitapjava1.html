@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #e9f0f9;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .contain {
+            width: 60%;
+            height: auto;
+            margin: 0 auto;
+            background: white;
+            margin-top: 100px;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+        .contain .tieude {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .contain .tieude .area {
+            width: calc(100% / 5);
+            text-align: center;
+            padding: 20px;
+            background: #e9f0f9;
+        }
+        .contain .tieude .area img {
+            width: 80%;
+            filter: grayscale(100%);
+        }
+        .contain .tieude .area.active img {
+            filter: none;
+        }
+        .contain .tieude .area.active {
+            background: white;
+        }
+        .contain .tieude .area h3 {
+            color: #686de0;
+            font-weight: 200;
+            font-size: 18px;
+        }
+        .contain .content .box {
+            display: none;
+            padding: 30px;
+        }
+        .contain .content .box img {
+            width: 40%;
+        }
+        .contain .content .noidung {
+            padding: 0 20px;
+            line-height: 1.5;
+        }
+        .contain .content .box .noidung h1 {
+            text-transform: uppercase;
+            font-weight: 800;
+            color: #686de0;
+        }
+        .contain .content .box .noidung button {
+            padding: 5px 15px;
+            text-transform: uppercase;
+            border-radius: 15px;
+            margin-top: 20px;
+            background-color: #e9f0f9;
+            border: none;
+            color: #686de0;
+            font-size: 18px;
+        }
+        .contain .content .box.show {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="tieude">
+            <div class="area active" id="0">
+                <img src="imgs/tab-1.png">
+                <h3>Research</h3>
+            </div>
+            <div class="area" id="1">
+                <img src="imgs/tab-2.png">
+                <h3>Planning</h3>
+            </div>
+            <div class="area" id="2">
+                <img src="imgs/tab-3.png">
+                <h3>Production</h3>
+            </div>
+            <div class="area" id="3">
+                <img src="imgs/tab-4.png">
+                <h3>Testing</h3>
+            </div>
+            <div class="area" id="4">
+                <img src="imgs/tab-5.png">
+                <h3>Result</h3>
+            </div> 
+        </div>
+        <div class="content">
+            <div class="box show">
+                <img src="imgs/tab-1.png">
+                <div class="noidung">
+                    <h1>research & analytics</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et rerum quia fugit sequi molestias nisi. Consectetur voluptate recusandae quae ex, sunt facilis reiciendis similique quaerat, quis accusantium enim, eum sapiente.</p>
+                    <button>details</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imgs/tab-2.png">
+                <div class="noidung">
+                    <h1>Planning</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et rerum quia fugit sequi molestias nisi. Consectetur voluptate recusandae quae ex, sunt facilis reiciendis similique quaerat, quis accusantium enim, eum sapiente.</p>
+                    <button>details</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imgs/tab-3.png">
+                <div class="noidung">
+                    <h1>Production</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et rerum quia fugit sequi molestias nisi. Consectetur voluptate recusandae quae ex, sunt facilis reiciendis similique quaerat, quis accusantium enim, eum sapiente.</p>
+                    <button>details</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imgs/tab-4.png">
+                <div class="noidung">
+                    <h1>Testing</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et rerum quia fugit sequi molestias nisi. Consectetur voluptate recusandae quae ex, sunt facilis reiciendis similique quaerat, quis accusantium enim, eum sapiente.</p>
+                    <button>details</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imgs/tab-5.png">
+                <div class="noidung">
+                    <h1>Result</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et rerum quia fugit sequi molestias nisi. Consectetur voluptate recusandae quae ex, sunt facilis reiciendis similique quaerat, quis accusantium enim, eum sapiente.</p>
+                    <button>details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+        let show = document.querySelectorAll(".contain .tieude .area");
+        let show2 = document.querySelectorAll(".contain .content .box");
+        for (let i = 0; i < show.length; i++) {
+            show[i].addEventListener("mouseover",show_text)
+        }
+        function show_text() {
+            for (let i = 0; i < show.length; i++) {
+                show[i].classList.remove("active");
+            }
+            this.classList.add("active");
+            for (let i = 0; i < show.length; i++) {
+                show2[i].classList.remove("show");
+            }
+            show2[this.id].classList.add("show");
+        }
+    </script>
+</body>
+</html>
